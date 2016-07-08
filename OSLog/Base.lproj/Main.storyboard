@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App log size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8W-Yl-X0E">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buf log size" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-Fq-bTZ">
+                                <rect key="frame" x="20" y="57" width="560" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Kpf-jw-wAu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-Hn-wUF">
+                                <rect key="frame" x="20" y="130" width="503" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="503" id="8XC-PW-Sxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8XC-PW-Sxd"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-pp-6xc">
+                                <rect key="frame" x="531" y="125" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flushSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xCJ-wN-eRN"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X3y-Fq-bTZ" firstAttribute="leading" secondItem="C8W-Yl-X0E" secondAttribute="leading" id="45X-z6-dde"/>
+                            <constraint firstItem="2B7-Hn-wUF" firstAttribute="leading" secondItem="X3y-Fq-bTZ" secondAttribute="leading" id="Ayt-VA-bUj"/>
+                            <constraint firstItem="C8W-Yl-X0E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Co0-yM-dcS"/>
+                            <constraint firstItem="kxf-pp-6xc" firstAttribute="leading" secondItem="2B7-Hn-wUF" secondAttribute="trailing" constant="8" symbolic="YES" id="Grk-sn-gjS"/>
+                            <constraint firstItem="kxf-pp-6xc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MVN-Mk-sMz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X3y-Fq-bTZ" secondAttribute="bottom" constant="483" id="O2V-VV-jx3"/>
+                            <constraint firstItem="C8W-Yl-X0E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QIC-lt-Cty"/>
+                            <constraint firstItem="2B7-Hn-wUF" firstAttribute="top" secondItem="X3y-Fq-bTZ" secondAttribute="bottom" constant="13" id="Zla-Is-fjX"/>
+                            <constraint firstItem="X3y-Fq-bTZ" firstAttribute="trailing" secondItem="C8W-Yl-X0E" secondAttribute="trailing" id="bXo-pN-Jo6"/>
+                            <constraint firstItem="X3y-Fq-bTZ" firstAttribute="top" secondItem="C8W-Yl-X0E" secondAttribute="bottom" constant="8" symbolic="YES" id="bwz-4G-WU8"/>
+                            <constraint firstItem="2B7-Hn-wUF" firstAttribute="centerY" secondItem="kxf-pp-6xc" secondAttribute="centerY" id="jic-59-X6U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2B7-Hn-wUF" secondAttribute="bottom" constant="449" id="nhv-ZX-Kp6"/>
+                            <constraint firstItem="C8W-Yl-X0E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pwH-rh-EGX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appLogSizeLabel" destination="C8W-Yl-X0E" id="CcI-Uu-dJK"/>
+                        <outlet property="bufLogSizeLabel" destination="X3y-Fq-bTZ" id="lMk-3r-ZkO"/>
+                        <outlet property="flushLabel" destination="2B7-Hn-wUF" id="tFn-4t-cKW"/>
+                        <outlet property="flushSwitch" destination="kxf-pp-6xc" id="60e-kZ-PpY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
